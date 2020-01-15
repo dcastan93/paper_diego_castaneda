@@ -148,8 +148,7 @@
   \city{Medellín},                              % city
   \cny{Co}                                    % country
 }
-\address[id=aff2]{% 
-
+\address[id=aff2]{%
   \orgname{Grupo de Investigación en Nuevos Materiales (GINUMA); Escuela de Ingenierías; Universidad Pontificia Bolivariana},
     %\street{Waterloo Road},                     %
   \postcode{055030}                                % post or zip code
@@ -216,9 +215,9 @@ Self-sensing materials are emerging as a promising technological development for
 %\end{keyword}
 
 \end{abstractbox}
-%
-%\end{fmbox}% uncomment this for twcolumn layout
-\end{fmbox}% comment this for two column layout
+
+\end{fmbox}% uncomment this for twcolumn layout
+%\end{fmbox}% comment this for two column layout
 \end{frontmatter}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -360,6 +359,7 @@ To correlate the variation of the electrical resistance and the strain, the expr
 
 \begin{eqnarray}\label{eqexpmuts}
 \lambda = \frac{\delta R}{\sigma R},
+\label{eq1}
 \end{eqnarray}
 
     
@@ -445,7 +445,7 @@ Finally, the images shown in Figure \ref{fig7} allow to propose two hypotheses:
 
 
 
-\subsection{Electrical behavior of the nanocomposite.}
+\subsection{Electrical behavior of the CNT/CMC.}
 
 The Ohmic behavior of the material was studied by following the proposed methodology for the acquisition of I-V curves described in the previous section and schematized in Figure \ref{fig3}a. From Figure \ref{fig8}a to Figure \ref{fig8}c, it is shown the amperometric response (I-V curves) of the CNT/CMC when an electrical potential is applied. These figures shown a linear relationship between voltage and current, therefore, it is concluded that the CNT/CMC material having 0.2 , 0.5 and 0.8 $\%wt$, exhibit an electrical behavior equivalent to an ideal resistor, that is, an Ohmic behavior.
 
@@ -506,50 +506,80 @@ For samples with 0.2$\%wt$, the characterization was not carried out using metho
 
 \subsection{Evaluation of the piezoresistive behavior.}
 
-In this subsection, the relationship between strain and the change in the electrical resistance of the CNT/CMC material when the samples are subjected to a compressing test is established . DC based methodology related in experimental procedure section  was selected for characterize the material piezoresistive behavior because the BDC equipment require to measure the composite electrical resistance is a scarce resource, and most are custom-made, resulting an instrumentation price increase and also making industrial scaling difficult.
+In this subsection, the relationship between strain and the change in the electrical resistance of the CNT/CMC material when the samples are subjected to a compressing test is established . DC based methodology related in experimental procedure section  was selected for characterize the material piezoresistive behavior because BDC equipment require to measure the composite electrical resistance is a scarce resource, and most are custom-made, resulting an instrumentation price increase and also making industrial scaling difficult.
 
-Piezoresistive characterization was only performed on samples which did not exhibit an electrical polarization effect, since it is impractical to wait until the stabilization time of electrical resistance in samples that exhibited electrical polarization, when SHM application are procurated. In this regard, only characterization of the piezoresistive behavior for the sample with 0.8 $\%wt$ was performed.
+Piezoresistive characterization was only performed on samples which did not exhibit an electrical polarization effect, since it is impractical to wait until the stabilization time of electrical resistance in samples that exhibited electrical polarization, when SHM application are procured. In this regard, only characterization of the piezoresistive behavior for the sample with 0.8 $\%wt$ was performed.
 
-The experimental results for the sample with 0.8 $\%wt$ are shown in Figure \ref{fig10}. In this figure, the material piezoresistive response is repeatable and reversible. It is also remarkable a proportional behavior between the electrical resistance and the compression-induced strain. Besides, the electric response of the material when it is subjected to compressive loads, consist of a negative change in the electrical resistance, which is caused by the reduction of the distance among the CNTs \cite{DAlessandro2017}.
+The experimental results for the sample with 0.8 $\%wt$ are shown in Figure \ref{fig10}. In this figure, the material piezoresistive response is repeatable and reversible. In this way, phenomena such as hysteresis or variation of the electrical response will not appear due repeated load application unless a damage occurs.  Therefore, it can be seen that at all times, the response of the piezoresistive material clearly depends on the instantaneous load that is being applied to it (i.e. it is not a complex response against coupling of several phenomena). In this way, the interpretation of data obtained from piezoresistive material will be simpler \cite{Lagason2016}.
 
-For multifunctional materials that function as sensors, it is convenient a reversible and repeatable response. In this way, phenomena such as hysteresis or variation of the electrical response will not appear due repeated load application unless a damage occurs.  Therefore, it can be seen that at all times, the response of the piezoresistive material clearly depends on the instantaneous load that is being applied to it (i.e. it is not a complex response against coupling of several phenomena). In this way, the interpretation of data obtained from piezoresistive material will be simpler [49].
+It is also remarkable the proportional behavior between the electrical resistance and the compression-induced strain. The negative slope in the electric response of the material when it is subjected to compressing loads is due to a negative change in the electrical resistance, which is caused by the reduction of the distance among the CNTs when a compressing test is applied to the sample \cite{DAlessandro2017}.
+
 
 \begin{figure}[h!]
-  \caption{\csentence{ Characterization with 0.8piezoresistance phenomenon in the sample with 0.8 $\%wt$ of CNTs.}
+  \caption{\csentence{ Characterization with 0.8 piezoresistive phenomenon in the sample with 0.8 $\%wt$ of CNTs.}
       }
       \label{fig10}
       \end{figure}
 
 
-Applying Equation 1 to all the points in Figure 10, it is possible to obtain the gauge factor for the 8 experiments. The obtained value was $972.87\epsilon^{-1}$ and its standard deviation was $17.47 \epsilon^{-1}$. With this result, the sensitive capability of the CNT/CMC with 0.8 $\%wt$ CNTs is demonstrated. Besides, it is observed that the CNT/CMC electric resistance starts to vary from the moment when load is applied, allowing to measure small strains magnitudes.
-Another result of the analysis of Figure 10 is the ability of the CNT/CMC material to withstand strains up to -100 µε and return to the initial state (electrical resistance magnitude). This can be explained since the compressive strength of the CNT/CMC samples exceed 30 MPa and its Young modulus were around 20 GPa when these were characterized according to ASTM C109/C109M-16a and ACI 318-14 standards. Therefore, at -100 µε, the compressive strength of the concrete has not been exceeded, knowing that the maximum stress experienced by the material at -100 µε according to the Hooke’s law, it approximately 2 MPa (assuming a linear elastic behavior just as an indicative reference), that is, around 10 $\%$ of the CNT/CMC compressive strength. 
-With above in mind, embedding the CNT/CMC within the RC beam causes a slight positive stress concentrator since it is rigidity is greater than the common concrete. However, it does not represent a threat to the component operability.
+Now, applying Equation \ref{eq1} to all the eight repetition presented in Figure \ref{fig10}, it was possible to calculate the average gauge factor value ($972.87\epsilon^{-1}$) and its standard deviation  ($17.47 \epsilon^{-1}$). Based on this result, the accuracy of the CNT/CMC material with 0.8 $\%wt$ is demonstrated. Besides, it is observed that the CNT/CMC electric resistance starts to vary from the moment when load is applied, allowing to measure small strains magnitudes.
+
+
+Observation of Figure \ref{fig10} suggest the ability of the CNT/CMC material to withstand strains up to -100 $\mu \epsilon$  without affect the structural integrity of the sample, since microcracking or plastic deformation  would be modified the overall electric resistance and the piezoresistive behavior of the material. This result is in line with the CNT/CMC mechanical characterization carried out following the  ASTM C109/C109M-16a and ACI 318-14 standards, determining a compressive strength and Young modulus of 30 MPa and  20 GPa respectively. With above in mind, embedding the CNT/CMC within the RC beam  causes a slight positive stress concentrator since its rigidity is greater than the concrete using in the construction industry (21 Mpa) according to ACI 318 standard. However, it does not represent a threat to the component operability. 
+
+ indicate that the maximum stress experienced by the material at -100 $\mu \epsilon$ according to the Hooke’s law, it approximately 2 MPa (assuming a linear elastic behavior just as an indicative reference), that is, around 10 $\%$ of the CNT/CMC compressive strength. 
+
 
 \subsection{ Full-scale beam tests.}
 
-After aging 28 days, the piezoresistive behavior of the CNT/CMC parallelepiped embedded into the RC beam was evaluated. The electrical and mechanical characterization were performed through a three-point bending test, for both a pristine and a damaged condition (with and without artificially induced positive damage), whereas strain and electrical resistance data were acquired. Figure 11 shows the change in the electrical resistance measured in the CNT/CMC material, when a load from 0 to 15 kN is applied at a constant displacement speed of 0.5 mm/min.
-The behavior of the electrical resistance vs. strain for the pristine and damaged conditions is shown in Figure 11. As can be seen, such behavior is nonlinear in the range from 0 to -10 µε. This can be associated to the complex phenomena of load transfer through the different interfaces between the RC beam elements: 1. corrugated steel reinforcement of the RC beam and the concrete of the RC beam, 2. concrete of the RC beam and corrugated steel rods embedded within the parallelepiped (dowels), 3. corrugated steel rods embedded within the parallelepiped (dowels)  and CNT/CMC material of the parallelepiped, and finally, 4. steel plate used as positive damage and concrete of the RC beam. In particular, the interface between the steel plate and the concrete was constituted by an epoxy adhesive layer, that could contribute greatly to the appearance of the non-linear phenomena.
+After RC beam aging for 28 days, the piezoresistive behavior of the CNT/CMC parallelepiped embedded into the RC beam was evaluated. The electromechanical characterization were performed through a three-point bending test, for both a pristine and a damaged condition (with and without artificially induced positive damage), whereas strain and electrical resistance data were acquired. Figure \ref{fig11} shows the change in the electrical resistance measured in the CNT/CMC material, when a load from 0 to 15 kN is applied at a constant displacement speed of 0.5 mm/min.
 
-Figure 11. Behavior of the piezoresistive response of the CNT/CMC against the state of damage and no damage for the RC beam. Dynamic load from 0 to 15 kN.
-From figure 11 it is possible to observe a change in the slope for damaged state vs. pristine state. Such change can be interpreted as a variation in the global beam stiffness, which is produced by the damage occurrence. This result demonstrates the capability to detect global changes in the stiffness of a simple structure such as a beam, by means of strain measurements obtained from a piezoresistive material.
-To validate the strains obtained through the CNT/CMC material embedded into the RC beam, a FBG sensor was bonded to one of the beam sides, by doing so it was opposite of the CNT/CMC parallelepiped, and both measured compressive strains. Strains measurements were gathered during all experiments using the FBG and, at the same time, electrical resistance was measured by using a DC tester. This procedure was repeated 10 times using the experimental setup described in section 2.5. The results obtained are presented in Figure 12.
-From Figure 12, is is possible to observe the repeatability of the results obtained for the CNT/CMC material and the FBG strain sensor. On the basis of the foregoing, the CNT/CMC just like the FBG provide a dynamic response to the load application, wherewith a strain is induced. However, it is observed that there are differences in the magnitude of the strain as the magnitude of the applied load increases. These differences are mainly due to three factors: 
+ As can be seen, such behavior is nonlinear in the range from 0 to -10 $\mu \epsilon$. This can be associated to the complex phenomena of load transfer through the different interfaces between the RC beam elements: 1. corrugated steel reinforcement of the RC beam and the concrete of the RC beam, 2. concrete of the RC beam and corrugated steel rods embedded within the parallelepiped (dowels), 3. corrugated steel rods embedded within the parallelepiped (dowels)  and CNT/CMC material of the parallelepiped, and finally, 4. steel plate used as positive damage and concrete of the RC beam. In particular, the interface between the steel plate and the concrete was constituted by an epoxy adhesive layer, that could contribute greatly to the appearance of the non-linear phenomena.
 
-1. The two sensors are not located in the same place (see numbers 4 and 6 in Figure 6), whereof the strain measurements obtained by both sensors give an account of the beam behavior at two different points,
+\begin{figure}[h!]
+  \caption{\csentence{ Behavior of the piezoresistive response of the CNT/CMC against the state of damage and no damage for the RC beam. Dynamic load from 0 to 15 kN.}
+      }
+      \label{fig11}
+      \end{figure}
 
-2. The nonlinear load transfer phenomena as explained before, 
 
-3. The fact that, when measuring the strain with the CNT/CMC material, which is embedded within the RC beam, its response is proportional to the volumetric deformation. The FBG sensor, on the other hand, measures uniaxial strain in the direction on which it is installed on the beam’s surface.
+From figure \ref{fig11} it is possible to observe a change in the slope for damaged state vs. pristine state. Such change can be interpreted as a variation in the global beam stiffness, which is produced by the damage occurrence. This result demonstrates the capability to detect global changes in the stiffness of a simple structure such as a beam, by means of strain measurements obtained from a piezoresistive material. This result entails that the CNT/CMC material has the ability to sense small strain magnitudes and from such strain measures it is possible to infer changes in the global stiffness promoted by damage occurrence.
 
-Figure 12. Behavior of the CNT/CMC and the FBG sensor as function of time. Dynamic load from 0 to 15 kN.
+To validate the strains obtained through the CNT/CMC material embedded into the RC beam, a FBG sensor was bonded to one of the beam sides, by doing so it was opposite of the CNT/CMC parallelepiped, and both measured compressive strains. Strains measurements were gathered during all experiments using the FBG and, at the same time, electrical resistance was measured by using a DC tester. This procedure was repeated 10 times using the experimental setup described in experimental procedure section and the results obtained are presented in Figure \ref{fig12}.
 
-Figure 13 shows the results of the strain measured by the FBG for a dynamic load from 0 to 15 kN applied to the RC beam at a constant displacement speed of 5 mm/min for the damage and undamaged states. Here, two phenomena can be observed: the first one is change in the slope at low load magnitudes (loads less than 8kN), whereby it matches with the previously described nonlinear behavior for the loads transfer on the RC beam. The second phenomenon is the global change in slope observed when the structure is damaged, compared to the pristine structure. This indicate the ability to infer changes in the global stiffness promoted by damage occurrence from FBGs strain measurements.
+From Figure \ref{fig12}, is is possible to observe the repeatability of the results obtained for the CNT/CMC material and the FBG strain sensor. On the basis of the foregoing, the CNT/CMC just like the FBG provide a dynamic response to the load application, wherewith a strain is induced. However, it is observed that there are differences in the magnitude of the strain as the magnitude of the applied load increases. These differences are mainly due to three factors: 
 
-Figure 13. Behavior of the FBG vs Load for undamaged and damaged conditions.
-Figure 14 shows the strain vs. load for damaged and undamaged states by using the CNT/CMC material. This result entails that the CNT/CMC material has the ability to sense small strain magnitudes and from such strain measures it is possible to infer changes in the global stiffness promoted by damage occurrence.
-In contrast to Figure 13, it is observed that the curves shown in Figure 14 do not show a significant slope when the applied load is less than 8kN; this is precisely due to the fact that the sensor is embedded within the structure, measuring the strain through a change in its volume, then, it is expected that the behavior of the acquired data is mostly linear against the applied load.
+\begin{enumerate}
 
-Figure 14. Behavior of the piezoresistive response of the CNT/CMC against the state of damage and no damage to the RC beam.
+ \item  The two sensors are not located in the same place (see numbers 4 and 6 in Figure \ref{fig6}), whereof the strain measurements obtained by both sensors give an account of the beam behavior at two different points,
+
+ \item  The nonlinear load transfer phenomena as explained before, 
+
+ \item  The fact that, when measuring the strain with the CNT/CMC material, which is embedded within the RC beam, its response is proportional to the volumetric deformation. The FBG sensor, on the other hand, measures uniaxial strain in the direction on which it is installed on the beam’s surface.
+
+\end{enumerate}
+
+\begin{figure}[h!]
+  \caption{\csentence{ Behavior of the CNT/CMC and the FBG sensor as function of time. Dynamic load from 0 to 15 kN.}
+      }
+      \label{fig12}
+      \end{figure}
+
+
+
+Figure \fig{fig13} shows the results of the strain measured by the FBG for a dynamic load from 0 to 15 kN applied to the RC beam at a constant displacement speed of 5 mm/min for the damage and undamaged states. Here, two phenomena can be observed: the first one is change in the slope at low load magnitudes (loads less than 8kN), whereby it matches with the previously described nonlinear behavior for the loads transfer on the RC beam. The second phenomenon is the global change in slope observed when the structure is damaged, compared to the pristine structure. This indicate the ability to infer changes in the global stiffness promoted by damage occurrence from FBGs strain measurements.
+
+\begin{figure}[h!]
+  \caption{\csentence{ Behavior of the FBG vs Load for undamaged and damaged conditions.}
+      }
+      \label{fig13}
+      \end{figure}
+
+
+
+In contrast to Figure \ref{fig13}, it is observed that the curves shown in Figure \ref{fig11} do not show a significant slope when the applied load is less than 8kN; this is precisely due to the fact that the sensor is embedded within the structure, measuring the strain through a change in its volume, then, it is expected that the behavior of the acquired data is mostly linear against the applied load.
+
+
 
 \section*{Conclusions}
 
