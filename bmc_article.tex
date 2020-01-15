@@ -1,0 +1,676 @@
+%% BioMed_Central_Tex_Template_v1.06
+%%                                      %
+%  bmc_article.tex            ver: 1.06 %
+%                                       %
+
+%%IMPORTANT: do not delete the first line of this template
+%%It must be present to enable the BMC Submission system to
+%%recognise this template!!
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                     %%
+%%  LaTeX template for BioMed Central  %%
+%%     journal article submissions     %%
+%%                                     %%
+%%          <8 June 2012>              %%
+%%                                     %%
+%%                                     %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                                                 %%
+%% For instructions on how to fill out this Tex template           %%
+%% document please refer to Readme.html and the instructions for   %%
+%% authors page on the biomed central website                      %%
+%% http://www.biomedcentral.com/info/authors/                      %%
+%%                                                                 %%
+%% Please do not use \input{...} to include other tex files.       %%
+%% Submit your LaTeX manuscript as one .tex document.              %%
+%%                                                                 %%
+%% All additional figures and files should be attached             %%
+%% separately and not embedded in the \TeX\ document itself.       %%
+%%                                                                 %%
+%% BioMed Central currently use the MikTex distribution of         %%
+%% TeX for Windows) of TeX and LaTeX.  This is available from      %%
+%% http://www.miktex.org                                           %%
+%%                                                                 %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% additional documentclass options:
+%  [doublespacing]
+%  [linenumbers]   - put the line numbers on margins
+
+%%% loading packages, author definitions
+
+\documentclass[twocolumn]{bmcart}% uncomment this for twocolumn layout and comment line below
+%\documentclass{bmcart}
+\usepackage{blindtext}
+%%% Load packages
+\usepackage{amsthm,amsmath}
+%\RequirePackage{natbib}
+\RequirePackage[authoryear]{natbib}% uncomment this for author-year bibliography
+\RequirePackage{hyperref}
+\usepackage[utf8]{inputenc} %unicode support
+%\usepackage[applemac]{inputenc} %applemac support if unicode package fails
+%\usepackage[latin1]{inputenc} %UNIX support if unicode package fails
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                             %%
+%%  If you wish to display your graphics for   %%
+%%  your own use using includegraphic or       %%
+%%  includegraphics, then comment out the      %%
+%%  following two lines of code.               %%
+%%  NB: These line *must* be included when     %%
+%%  submitting to BMC.                         %%
+%%  All figure files must be submitted as      %%
+%%  separate graphics through the BMC          %%
+%%  submission process, not included in the    %%
+%%  submitted article.                         %%
+%%                                             %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\def\includegraphic{}
+\def\includegraphics{}
+
+
+
+%%% Put your definitions there:
+\startlocaldefs
+\endlocaldefs
+
+
+%%% Begin ...
+\begin{document}
+
+%%% Start of article front matter
+\begin{frontmatter}
+
+\begin{fmbox}
+\dochead{Research}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%% Enter the title of your article here     %%
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{Towards Strain-Based Structural Health Monitoring of Civil Structures Based on Self-Sensing Concrete Nanocomposites}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%% Enter the authors here                   %%
+%%                                          %%
+%% Specify information, if available,       %%
+%% in the form:                             %%
+%%   <key>={<id1>,<id2>}                    %%
+%%   <key>=                                 %%
+%% Comment or delete the keys which are     %%
+%% not used. Repeat \author command as much %%
+%% as required.                             %%
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author[
+   addressref={aff1},                   % id's of addresses, e.g. {aff1,aff2}
+   corref={aff1},                       % id of corresponding address, if any
+   %noteref={n1},                        % id's of article notes, if any
+   email={diego.castanedas@upb.edu.co}   % email address
+]{\inits{DL}\fnm{Diego L} \snm{Castañeda-Saldarriaga}}
+\author[
+   addressref={aff1},
+   email={joham.alvarez@upb.edu.co}
+]{\inits{JA}\fnm{Joham} \snm{Alvarez-Montoya}}
+\author[
+   addressref={aff2},
+   email={hader.martinez@upb.edu.co}
+]{\inits{VTM}\fnm{Vladimir} \snm{Martínez-Tejada}}
+\author[
+   addressref={aff1},
+   email={julian.sierra@upb.edu.co}
+]{\inits{JSP}\fnm{Julián} \snm{Sierra-Pérez}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%% Enter the authors' addresses here        %%
+%%                                          %%
+%% Repeat \address commands as much as      %%
+%% required.                                %%
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\address[id=aff1]{%                           % unique id
+  \orgname{Grupo de Investigación en Ingeniería Aeroespacial (GIIA), Escuela de Ingenierías; Universidad Pontificia Bolivariana}, % university, etc
+  %\street{Waterloo Road},                     %
+  \postcode{055030}                                % post or zip code
+  \city{Medellín},                              % city
+  \cny{Co}                                    % country
+}
+\address[id=aff2]{% 
+
+  \orgname{Grupo de Investigación en Nuevos Materiales (GINUMA); Escuela de Ingenierías; Universidad Pontificia Bolivariana},
+    %\street{Waterloo Road},                     %
+  \postcode{055030}                                % post or zip code
+  \city{Medellín},                              % city
+  \cny{Co}                                    
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%% Enter short notes here                   %%
+%%                                          %%
+%% Short notes will be after addresses      %%
+%% on first page.                           %%
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{artnotes}
+%\note{Sample of title note}     % note to the article
+%\note[id=n1]{Equal contributor} % note, connected to author
+\end{artnotes}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%% The Abstract begins here                 %%
+%%                                          %%
+%% Please refer to the Instructions for     %%
+%% authors on http://www.biomedcentral.com  %%
+%% and include the section headings         %%
+%% accordingly for your article type.       %%
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{abstractbox}
+
+\begin{abstract} % abstract
+Self-sensing materials are emerging as a promising technological development for the construction industry, where novel materials with the capability to provide information about the structural integrity and operating as structural material are required. From this perspective, cement-based materials have attracted the attention of several studies due to their electromechanical and self-sensing properties. This article reports the development and multipurpose experimental characterization of a multifunctional cement-based nanocomposite material with carbon nanotube (CNT) inclusions, finding potential application on the structural health monitoring (SHM) field for the damage detection stage. To characterize the electrical response, a methodology based on current-voltage (I-V) curves was made using copper electrodes embedded in each extreme of the samples. Subsequently, a comparison is made between measurements based on direct current (DC) and biphasic direct current (BDC) against electrical resistance time response and polarization effect. Finally, the piezoresistive  behavior (variation of electrical resistance with applied strain) of the manufactured samples and a strain measurement in a reinforced concrete beam (RC-beam) is reported  using a compression test for the manufactured samples and a three-point bending test for the RC-beam. Results showed that all the manufactured samples exhibit an Ohmic response. The composite material exhibits a linear proportionality between the values of electrical resistance against the magnitude of the applied loads. Change in global stiffness associated with the damage occurrence on the beam from a variation in the electrical resistance measured in the material was successfully self-sensing using the manufactured composited
+\end{abstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%% The keywords begin here                  %%
+%%                                          %%
+%% Put each keyword in separate \kwd{}.     %%
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{keyword}
+\kwd{Smart materials}
+\kwd{structural health monitoring}
+\kwd{self-sensing composites}
+\kwd{carbon nanotubes}
+\kwd{cementitious composites}
+\kwd{nanocomposites}
+\kwd{civil structures}
+\end{keyword}
+
+% MSC classifications codes, if any
+%\begin{keyword}[class=AMS]
+%\kwd[Primary ]{}
+%\kwd{}
+%\kwd[; secondary ]{}
+%\end{keyword}
+
+\end{abstractbox}
+%
+%\end{fmbox}% uncomment this for twcolumn layout
+\end{fmbox}% comment this for two column layout
+\end{frontmatter}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%% The Main Body begins here                %%
+%%                                          %%
+%% Please refer to the instructions for     %%
+%% authors on:                              %%
+%% http://www.biomedcentral.com/info/authors%%
+%% and include the section headings         %%
+%% accordingly for your article type.       %%
+%%                                          %%
+%% See the Results and Discussion section   %%
+%% for details on how to create sub-sections%%
+%%                                          %%
+%% use \cite{...} to cite references        %%
+%%  \cite{koon} and                         %%
+%%  \cite{oreg,khar,zvai,xjon,schn,pond}    %%
+%%  \nocite{smith,marg,hunn,advi,koha,mouse}%%
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%% start of article main body
+% <put your article body there>
+
+%%%%%%%%%%%%%%%%
+%% Background %%
+%%
+
+\section{Introduction}
+It is a fact that materials and structures degrade with time and usage. Within the context of civil structures (e.g. buildings, bridges, tunnels, dams, among others), natural and man-made hazards (e.g. earthquakes, typhoons, hurricanes, fire or collisions) represent also threats to the structural integrity that may cause catastrophic failures involving economic and human losses \cite{Xu2017a}. This requires the implementation of inspection procedures in order to guarantee serviceability and reliability of structures in their long lifetimes. These inspections are often carried out at a fixed time intervals using different methods comprised within the field of Nondestructive Testing (NDT), where the quality or integrity of a component is determined nondestructively by interrogating one or several physical variables that are damage-sensitive \cite{Shull2002}.
+
+Some NDT methods include visual testing (both direct and remote) \cite{Agnisarman2019}, ultrasonics \cite{Zhao2018}, acoustic emissions \cite{Meo2014}, infrared thermography \cite{Yamazaki2018}, ground penetrating radar techniques and electrical resistivity tomography \cite{Salin2018}. These methods often require human intervention that increases uncertainty and implies costly equipment and personnel. Structural Health Monitoring (SHM) overcomes these factors using approaches where sensors are permanently installed into the structure so that NDT is performed continuously or online \cite{Xu2017a}. In these regard, SHM can reduce costs by providing valuable information for maintenance management, improve reliability by the possibility of finding damages at incipient stages and improve future designs by making available value information about the performance of the current ones \cite{Ogai2018a}.
+
+Recent advances in SHM for civil structures include the use of piezoelectric sensors \cite{Liao2019},  fiber optic sensors (FOS) \cite{Glisic2013, Barrias2019, Xu2019}, electrochemical sensors (e.g. potentiometric, amperometric and conductometric) \cite{Hu2011, Qiao2012} and self-sensing composite materials \cite{Tian2019a}. A deep review of the sensing technologies applied to civil structures was recently reported by Taheri \cite{Taheri2019a}. Considering the available sensing technologies, one concern when developing effective SHM systems is the selection of the type of sensor to be used. The resistance and durability of the sensor operating in harsh environments and its integrability to large structures are paramount. That is why self-sensing composites, materials that not only bear loads but provide measures as a response to an external stimulus, have raised the interest of the research community \cite{DAlessandro2016, Han2015a, Rana2016a, Yang2020a}.
+
+As cement-based materials or cementitious composites (e.g. paste, mortar and concrete) are the most popular building materials \cite{Xu2017a}, much of the scientific research around self-sensing composites is related to such materials. Self-sensing cementitious composites, also known as smart concretes, are fabricated by mixing functional fillers (e.g. carbon fibers \cite{Baeza2013a,Teomete2015, Sarwary2019a}, carbon nanotubes \cite{Elkashef2015a}, steel fibers \cite{Kang2018b}, \cite{Ding2019}, graphite powder \cite{Simonova2018}, nickel powder \cite{Wang2015} , among others \cite{Tian2019a}). Particularly, carbon nanotubes (CNTs) have raised the interest in the last years, due to their high specific mechanical and transport properties \cite{Schumacher2014,Ubertini2016}. Also, the incorporation of CNTs in cementitious materials can endow these materials with a piezoresistive behavior. The CNTs are materials that when they are subjected to strain, their electrical properties change up to two orders of magnitude, exhibiting a proportional and reversible piezoresistive response to the external stimulus \cite{Garcia-Macias2017, Garcia-Macias2017a, Minot2003}. This electromechanical behavior is explained by various authors as a change in the conductivity of the CNT due to the change in the energy band induced by the strain applied on the volume of this \cite{Minot2003, PHAM2008, Han2015, Njuguna2012, Tjong2009, XinxinSun2009}. 
+
+On the other hand, as the matrix is dielectric, electrical properties are filler-dominated by the CNT networks and the composite’s electrical conductivity changes according to the strain conditions \cite{Tian2019a}.  In other words, by adding conductive fillers in dielectric matrices such as CNTs, there is a spontaneous response to the application of loads that generate strain in their structure. Therefore, concretes with CNTs as fillers can be used as strain sensors. Moreover, such composites can also be used as a damage sensor since CNT networks can also be disturbed by damages such as cracks.
+Despite this approach is promising for SHM of civil structures and different studies have been conducted in the field including electromechanical characterization \cite{Ubertini2014, Meoni2018a, Liu2019, Kim2019a}, fabrication procedures \cite{DAlessandro2016, Parvaneh2019a} and modeling techniques \cite{Garcia-Macias2017, Eftekhari2014, Garcia-Macias2018b}, it is still considered in their infancy stage before a broad practical implementation \cite{Taheri2019a}. There are some issues that need to be addressed before wide implementation of this technology in infrastructures, such as quality and variability in fabrication, uniform dispersion of fillers in the matrix, measurement procedures allowing reliable and repeatable monitoring of conductivity and approaches to damage detection in full-scale civil engineering structures \cite{Tian2019a, DAlessandro2016a, Shi2019b}.
+
+Compared with characterization and fabrication, little research has been conducted to investigate the integrability and damage monitoring of self-sensing cementitious composites in structural members made of reinforced concrete under complex load scenarios as expected in real-world modern infrastructures \cite{Lagason2016, You2017, Al-Dahawi2017a, Naeem2017a}. Damage monitoring in beams or columns greatly depends on the self-sensing composite configuration. 
+Most of the reported studies have proposed the construction in bulk, namely, the whole member is made of the self-sensing composite providing higher sensitivity to damages \cite{Hannan2018a, Lagason2016, Al-Dahawi2017a, Downey2017a, Gupta2017a, You2017, Yldrm2018}. For example, \cite{Al-Dahawi2017a} fabricated engineered cementitious composites with different carbon-based materials including CNTs. Then, the beam specimens were loaded under four-point bending tests in the elastic and plastic region to sense damage. The results were suitable in the plastic region, however, upon unloading in the elastic region the authors found not successful results. \cite{Downey2017} developed a resistor mesh model to detect, localize and quantify damage in structures from self-sensing cementitious composites based on the hypothesis that the electrical resistance of any self-sensing conductive material depends on its strain and damage state. \cite{Yldrm2018} investigated the self-sensing capabilities of reinforced large-scale beams designed to fail under shearing in four-point bending tests. The authors successfully proved that increments in maximum shear crack width produce changes in the electrical resistance.
+
+However, when dealing with a practical implementation of such bulk fabrication, which often requires laboratory procedures with expensive nanofillers, does not seem cost-effective towards a broad implementation. Other alternatives include coatings \cite{Downey2017, Downey2018e, Nespor2018a}, in which one surface of the member is covered with a layer of the self-sensing composite, embedded \cite{Meoni2018a, Saafi2009, DAlessandro2017}, where the self-sensing composite is prefabricated into standard small-size sensors and then integrated to the member, and novel forms dealing with coatings of the aggregates \cite{Han2015b, Gupta2017a, Loh2015a}.
+
+The embedded form has the advantage of being less expensive and easier to integrate for practical applications. Civil structures can be designed with a network of such sensors to allow distributed sensing over large areas without needing a high amount of material and disturbing the structural performance. Additionally, this form is suitable for SHM of existing infrastructure as opposed to the bulk form which may be restrained to new constructions. 
+
+\cite{Saafi2009} proposed cement-CNT sensors embedded into concrete beams for crack detection under three-point bending tests. The authors demonstrated that sudden changes in the effective resistance are indicative of crack initiation. \cite{DAlessandro2016b} embedded cement-based sensors doped with CNTs for strain monitoring of reinforced concrete beams. The authors proposed a damage detection strategy based on vibration tests that were carried out by exciting the beam with a hammer. Spectral analysis of the results obtained with the smart sensors and with strain gauges included for validation demonstrated similar results, therefore, vibration-based SHM is feasible with these sensors. \cite{Lim2017} performed crack onset monitoring by embedding  cementitious composite sensors in reinforced mortar beams, the authors based their damage detection strategy on that if the cracks nucleate in the concrete, it could be propagated to the sensor and, therefore, the conductivity will change. \cite{Naeem2017a} evaluated the feasibility of crack sensing using CNT/cement composites in reinforced mortar beams. The authors found that steep changes in the resistance occurred at failure of the mortar under flexural loading. 
+
+The damage detection approaches reviewed above rely on damages or cracks propagating to the cementitious composite sensors to change the CNT network and, hence, change resistance measurements. However, in real scenarios non-allowable damages cannot penetrate the sensor leading to misclassifications. Based on previous work related to strain-based SHM \cite{Sierra-Perez2015, Sierra-Perez2018}, it is proposed to use resistance measurements (correlated with strain measurements) to detect damages relying on that a damage occurrence (e.g. cracks, inclusions, corrosion, among others) affects the local stiffness of the structure and, therefore, the strain field is modified.  
+The aim of this paper is to present a multi-purpose study that includes the characterization of cementitious composites with inclusions of CNTs, different test procedures and a proof-of-concept demonstration in a simply supported beam made of reinforced concrete of the suitability of these types of sensors for strain-based SHM. The novelty of this study focuses on the effective integration of the self-sensing concrete sensors in a structural member and in using information from them for damage detection based on strain demonstrating their suitability for future practical SHM applications.
+
+This paper is divided into four sections, after this brief introduction, the experimental procedures to develop the specimens under study and their characterization methods including I-V curves obtention, DC-based electrical characterization and piezoresistive behavior characterization. After that the results of such characterizations are shown in conjunction with the proof-of-concept in the structural member for SHM purposes.
+
+
+\section{Experimental procedure.}
+
+The experimental procedure used in this work was divided into two parts: the first one is focused on the dispersion of CNTs into a cement-based material, having as a main objective to obtain a uniform distribution of CNTs within the matrix. The second part is focused on an CNT dispersion analysis based on Scanning Electron Microscopy (SEM) images the characterization of the electromechanical behavior of the composite, using a  DC and BDC methodology. 
+
+\subsection{Materials and sample manufacturing.}
+
+For the cementitious matrix of the composite material, regular Portland cement, quartz sand and water were used, in a water-to-cement ratio of 1:3 following ASTM C109 standard \cite{ASTMC1092000}. The CNTs used in this work were multi-walled type, from 10 to 20 micrometers in length and 50 to 80 nanometers in diameter supplied by Nanostructured and Amorphous Materials Inc company.
+
+As dispersing agent, sodium dodecyl sulfate (SDS) was used in order to avoid the agglomeration of CNTs within the matrix, to improve the dispersion quality and increase the concrete workability. In previous works \cite{Castaneda-Saldarriaga2019, Kyrylyuk2008, Shao2017, Myung2014, Sasmal2017, Rehman2018}, dispersants such as Triton X-100, Tween 20 and SDS were evaluated in order to determine the proportion and mixtures that improved the CNT dispersion. These studies concluded that the SDS is the most suitable in terms of avoiding the agglomeration of CNTs.
+
+Several researches have been oriented to the effect of the CNT addition on electrical conductivity, the percolation threshold (defined as the minimum fraction of CNTs necessary for the material to exhibit electrical conductivity) and the material’s piezoresistive properties \cite{Garcia-Macias2017, Baeza2013a, Yoo2018a}. In order to estimate what percentages above the percolation threshold generate better piezoresistive properties, CNT percentages by weight ($\%wt$) of 0.2, 0.5 and 0.8 of the total weight of the concrete (cement/sand/water/dispersant) were selected following the experimental methodologies proposed in the references \cite{Coppola2011, Downey2017a, Cui2013}.
+
+Since the piezoresistive effect considerably depends on a proper CNT dispersion and they tend to agglomeration due to van der Waals forces, the used methodology started by preparing a solution of SDS dispersant with a water-to-dispersant ratio of 10:1 \cite{Shao2017, Noh2013, Lee2017, Collins2012}.
+
+To obtain the water/dispersant solution (see Figure \ref{fig1}a), a BRANSON S-450D ultrasonic sonicator  with a maximum power operation of 400 Watts and tip of $\frac{1}{4}$ inch was used for five minutes (1 second on and two seconds off, so that overheating the sample was  avoided) \cite{Konsta-gdoutos2010, Konsta-Gdoutos2014}. Once a solution between water and dispersing agent was obtained, the different proportions of CNTs were added to the solution and the ultrasonic sonicator was used again for 45 minutes by pulses of one second on, and two seconds off (Figure \ref{fig1}b). The ultrasonic sonicator power was set at 12 W for both processes.
+
+\begin{figure}[h!]
+  \caption{\csentence{Manufacturing process of the CNT/Cement Matrix Composite (CNT/CMC).}
+      }
+   \label{fig1}
+      \end{figure}
+
+
+
+Simultaneously, according to the ASTM C109 standard \cite{Qiao2012}, the quantities of sand and cement for the manufacture of concrete samples (as shown in Figure \ref{fig1}c) were mixed with a mechanical stirrer. The next step was to pour the water/dispersant/CNTs solution to the cement/sand mixture.  Thereupon, the mixture was homogenized using a mechanical stirrer at a constant speed of 200 rpm (Figure \ref{fig1}d) following ASTM C1329 and ASTM C109 standards \cite{Collins2012, AmericanSocietyforTestingandMaterials2014}.
+
+\begin{figure}[h!]
+  \caption{\csentence{CNT/CMC specimens and copper electrodes mesh type configuration.}
+  \label{fig2}
+      }
+      \end{figure}
+
+
+Finally, the  (CNT/CMC) material was cast in cube molds of 52x52x52 mm, following ASTM C109 \cite{ASTMC1092000} (Figure \ref{fig1}e), whereby copper electrodes were arranged in mesh-like configuration (as shown in Figure \ref{fig2}), so that it were embedded in the material. Copper was selected as the electrode material due to its low electrical resistance, which guarantees that the electrical resistance measurements of the composite material obtained, mostly belong to the material and not to the electrodes \cite{Kim2016}. All CNT/CMC samples were naturally aged for 28 days under ACI 308 standard \cite{ACICommittee3082016}.
+
+\subsection{Scanning electron microscopy of CNT/CMC material}
+After the aging for 28 days, specimens with different concentrations of CNTs were taken to be characterized using SEM. A Jeol JCM-6000 SEM was used in order to find a relationship among the concentration of CNTs, its dispersion and the electrical resistance of each specimen. A thin gold/palladium coating was deposited on the surface of the samples so as to avoid overload phenomena in dielectric samples when they are irradiated with the electron beam.
+
+\subsection{Electrical behavior of the CNT/CMC material.}
+
+To characterize the Ohmic behavior of the composite material, a I-V curve test  was implemented following the work performed by \cite{Han2015a}. This characterization helps to select the measuring methods and the measuring equipment. A comparison was also carry out between the use of techniques that involve direct current (DC) in order to find an appropriated methodology to measure the electrical properties of the CNT/CMC materials. Finally, the methodology used to characterized the piezoresistive phenomenon is presented.
+
+\subsubsection{Ohmic characterization of the CNT/CMC material.}
+
+Characterizing the Ohmic behavior of the material involves measuring its  amperometric response when a voltage (V) input is applied in order to obtain the I-V curves. For this purpose, a typical assembly \cite{YORKE1981200} of an ammeter, a DC power supply and a 10 kOhm resistor was used for obtaining I-V curves of each specimen.
+
+The electrical resistor was connected in series with one of the electrodes of the specimen and power the circuit using a DC source  as is shown in Figure \ref{fig3}a. Afterwards, an ammeter was used to measure the current flowing through the specimen. The current passing through the sample was measured using a UNIT-T digital multimeter model UT39A by means of a serial connection with the circuit, while the applied electrical voltage ranges from 0 to 9 volts in 0.5-volt steps. The experimental setup is shown in Figure \ref{fig3}a.
+
+
+\subsubsection{Electrical characterization using DC and DC-biphasic procedures.}
+
+Once the Ohmic behavior was validated by the I-V curves analysis, DC and DC-biphasic methodologies were implemented to characterize the piezoresistive behavior of the composite. The experimental setup for the electrical resistance measurement using DC, uses a digital multimeter (Fluke model 112) and an electrical resistance directly between the two electrodes, as shown in Figure \ref{fig3}b. The frequency  sampling rate was set in 1 Hz \cite{Downey2017, Coppola2011, Dong2016}.
+
+On the other hand, BDC was selected since the modification of the charge distribution that occurs in a dielectric material due to a strong electric field. When electrons are concentrated on the nucleus side, near the positive terminal of the field, an increase in electric charge is generated. BDC aims to avoid the polarization phenomenon using a square DC wave that is responsible for discharging the molecules using an electronic flow in opposite direction to the charge \cite{Downey2017a, BOTTCHER1973}.
+
+The methodology for measuring electrical resistance using BDC was proposed by  Downey et al. \cite{Downey2017a}. According to the authors, a I-V curve type assembly is recommended. In this assembly, the DC power supply is replaced with a two-phase DC source with a square wave output signal and a $50\%$ duty cycle, and a $R_0$ resistor of 1 kOhm is connected in serie to the circuit to determine the current flowing through the sample. Figure \ref{fig3}c illustrates the experimental setup used for BDC measurements.
+
+To perform the electrical characterization using BDC was applied a 5 V peak-peak voltage between the specimen electrodes $V_EXT$ with 1 Hz wave frequency. To measure the voltage $V_EXT$ and $V_INT$, two Tektronix brand oscilloscopes were used, model TDS 1012C - EDU, with a resolution of 0.02 V at a data sampling rate of 1 Hz, taking only the positive values of the square signal supplied to the circuit.
+
+Finally, to determine the electrical resistance of the composite material, the average value of $V_EXT$ set in the $80\%$ of the positive wave was taken and multiplied by the value of the resistance $R_0$ using the Ohm's law, finding the current (I) flowing through the composite. Then, the the average value of $V_INT$ set in $80\%$ of the positive wave was taken and divided by the current (I), finding the resistance of the CNT/CMC material.
+
+\begin{figure}[h!]
+  \caption{\csentence{a) Electrical connection diagram for ohmic characterization of the CNT/CMC. b) Electrical connection diagram for characterization of the electrical resistance using DC source. c) Electrical connection diagram for characterization of the electrical resistance using BDC.}
+      }
+  \label{fig3}
+      \end{figure}
+
+
+\subsection{Piezoresistive behavior.}
+
+To evaluate the electromechanical behavior of the CNT/CMC material, the electrical resistance was measured using the experimental setup illustrated in Figure 3b while an uniaxial compressive test was carried out using an INSTRON 5582 universal testing machine. To measure the strain during the uniaxial compressive test, each specimen was instrumented with a Fiber Bragg Grating (FBG) bonded on the surface of one of the faces of the specimens subjected to compression. An optic interrogator Micron Optics SM130-700 was used to process the FBG signals by tracking the reflected wavelength in response to the mechanical stimuli (strain) applied to the optical fiber. Figure \ref{fig4} shows the experimental setup used for the piezoresistive characterization of the material. 
+
+
+The piezoresistive effect was assessed using continuous sampling, i.e., while a compression load was applied to the specimens, the data corresponding to the variation in electrical resistance and strain were acquired. The maximum magnitude of the applied load performed in each samples was 5 kN, with no more than 120 $\mu\epsilon$ obtained in each measurement. This level of strain ensures no damages in the CNT/CMC specimens. The electrical resistance and strain values were acquired at a frequency rate of 1 Hz.
+
+\begin{figure}[h!]
+  \caption{\csentence{Experimental setup for CNT/CMC piezoresistivity determination.}
+      }
+    \label{fig4}
+      \end{figure}
+
+To correlate the variation of the electrical resistance and the strain, the expression described in Equation 1 was used:
+
+\begin{eqnarray}\label{eqexpmuts}
+\lambda = \frac{\delta R}{\sigma R},
+\end{eqnarray}
+
+    
+where $R$ is the initial resistance, $\delta R$ is the difference between initial resistance and final resistance and $\sigma$ are the strain measured by the FBG \cite{Pisello2017, Jang2017}.
+
+\subsection{Health monitoring of a reinforced concrete beam.}
+
+Once  the piezoresistive behavior of the composite material was characterized, the CNT/CMC material was embedded into a RC beam in order to asses its piezoresistive response. For this purpose, a CNT/CMC material was development using the same experimental procedure related in previous sections but a different sample geometry to make sure the load transfer between the RC beam and the CNT/CMC.
+
+To ensure the load transfer between the RC beam and the CNT/CMC, corrugated steel rods of 6.35 mm diameter and 80 mm length were used (Figure 5a). Half of the length of the corrugated steel rods was embedded into the material and the remaining half into the RC beam, as can be seen in Figure \ref{fig5}c. The middle of of the material remains without corrugated steel rods (see Figure \ref{fig5}a).
+
+In this way, besides the chemical bond connecting the concrete and corrugated steel, a mechanical bonding occurs between both of them. Therefore, the load transfer between the concrete beam and the CNT/CMC material occurs through both effects, mostly, due to the mechanical interaction corrugated steel/concrete.
+
+To ensure that the electrical properties of the CMC/CMC parallelepiped with corrugated steel rods did not differ from those exhibited by the specimens made by following ASTM C109 standard \cite{ASTMC1092000} described in section 3.1., the following steps were proceeded:
+
+\begin{itemize}
+\item The same proportion of CNT and dispersion method were used, as well as the same proportions of cement, water, sand and dispersant.
+
+\item The distance between the electrodes in the middle volume of the parallelepiped was ensured to be the same as that used in the specimens described in 3.1.
+
+\item The dimensions of the cross-section of the parallelepiped remained the same as those of the specimens described in section 3.1 and the measurements of the copper electrodes in mesh type configuration were the same as shown in Figure 2. 
+\end{itemize}
+
+The RC beam, where the CMC/CMC material was embedded, was made with the same structural materials and proportions used to make the CMC as described in the previous section and a corrugated steel structure (see Figure \ref{fig5}b) but without the addition of CNTs. Its final dimensions were 650 mm length, with a cross section of 160 x 130 mm.
+
+The integration of the CNT/CMC parallelepiped within the RC beam was carried out by positioning the specimen in the steel frame shown in Figure \ref{fig5}b. Hereinafter, the steel frame and CNT/CMC parallelepiped were placed in a wood formwork where the concrete was cast. Finally, the RC beam was aged for 28 days. 
+
+\begin{figure}[h!]
+  \caption{\csentence{Manufacture of the RC beam for the validation of the operation of the sensor against the health monitoring. a) CNT/CMC parallelepiped with corrugated steel rods. b) inclusion of the CNC/CMC parallelepiped within the steel frame of the RC beam. c) Casting over the CNC/CMC parallelepiped and the reinforced steel structure of the concrete for the fabrication of the RC beam.}
+      }
+      \label{fig5}
+      \end{figure}
+
+
+For the validation of the CNT/CMC parallelepiped embedded within the RC beam as a strain sensor, a three-point bending test was performed. The distance between supports was set in 600 mm and a dynamic load was applied to the RC-beam from 0 to 14 N at a constant displacement speed of 5 mm/min. Measurements of the electrical resistance of the CNT/CMC were taken while applying load using the same methodology described in previous section. The experimental setup can be seen in Figure \ref{fig6}.
+
+The main idea behind SHM based on strain measurements is to study the slope changes in a load vs. strain (which represents the global stiffness of the RC beam) promoted by damage occurrence. A real damage (e.g. a crack) reduces the global stiffness and therefore, the slope of the curve decreases. On the other hand, a positive damage increases the global stiffness and the slope should increase.
+
+To infer changes in the global stiffness of the RC beam, it was necessary to create a baseline for the pristine condition. A baseline is an accurate measurement of a process functionality before any change of an input variable occurs. This data allows comparing the effect of a change in the behavior of the phenomenon being evaluated.  The baseline for the pristine beam was built by using the aforementioned load conditions.
+
+\begin{figure}[h!]
+  \caption{\csentence{Experimental setup:  RC beam in INSTRON universal testing machine with 100 kN load cell, in configuration for bending test. 1) Fluke 112 multimeter. In this assembly, it is used to measure the electrical resistance of the piezoresistive sensor. 2) Micron Optics SM130 fiber optic interrogator. This equipment was used to obtain strain data from the FBG. 3) Connection of the tips of the digital multimeter with the electrodes of the piezoresistive sensor. 4) Cementitious matrix sensor electrodes. 5) Load cell support on the beam. 6) FBG sensor positioned so that the compression to which the sensor is exposed is measured when a load is applied to the beam. 7 and 8) Supports for three-point bending measurement.}
+      }
+      \label{fig6}
+      \end{figure}
+
+After building the baseline for the RC beam, a positive artificial damage (addition of stiffness to the cross section) was induced on it. In this sense, a steel plate was adhered to one of the beam surfaces so as to increase the stiffness of the cross section by $20\%$. The dimensions of the steel plate were 160x160 mm and 10 mm thick. 
+
+The steel plate was bonded to the surface using an epoxy adhesive, for which it was necessary to prepare both surfaces by an abrasive process (to flatten the surface) and cleaning (in order to remove dirt and rust). Afterwards, to keep the steel plate in contact with the RC beam while the epoxy adhesive cured, "C-clamps" were used to press the plate onto the surface of the RC beam.
+
+Same load conditions used for the pristine condition were used for testing the “damaged” RC beam. Data for the variation of the electrical resistance of the CNT/CMC parallelepiped were acquired whilst load was applied. The experiments for the pristine and damaged states were repeated 10 times each one. The experimental set-up shown in Figure \ref{fig3}b was implemented to measure the variation of the electrical resistance for both states (pristine and damaged).
+
+\section{Experimental results and discussion}
+
+\subsection{Scanning electron microscopy.}
+
+Results from SEM images at a 10 $\mu m$ scale are presented in Figure \ref{fig7}. As expected, the growth of agglomerations or clusters of CNTs within the CMC upscale as the $\%wt$ of CNT increases (Figure \ref{fig7}a, \ref{fig7}b and \ref{fig7}c). This result entails as the CNT percentage within the sample increases, the distribution of CNTs within the sample tends to become uniform, since CNT agglomerations generate larger clusters that cover larger areas, producing a uniform lattice within the entire composite \cite{Garcia-Macias2017, Nam2015}.
+
+\begin{figure}[h!]
+  \caption{\csentence{SEM images for samples: a) 0.2 $\%wt$ (2700X), b) 0.5 $\%wt$ (2700X) and c) 0.8 $\%wt$ (2000X)}
+      }
+      \label{fig7}
+      \end{figure}
+
+
+It can be observed in Figure \ref{fig7}a that CNTs are agglomerated in few clusters, also these are randomly scattered on the surface and distant from each other, so it is estimated that the electrical conduction phenomenon occurs mostly by electron hopping \cite{Balberg1984, Garcia-Macias2017} and consequently, this sample is below the percolation threshold.
+
+Figure \ref{fig7}b shows CNT clusters homogeneously distributed. Additionally, the distance between the clusters decreases compared with Figure \ref{fig7}a, and it could be expected that the electrical conductivity phenomenon occurs both by electron hopping and by conductivity networks between CNTs. This behavior indicates that the sample with 0.5 $\%wt$ is above the percolation threshold \cite{Balberg1984, Garcia-Macias2017}.
+
+Furthermore, when observing Figure \ref{fig7}c, it can be seen that there is no significant difference or separation between the CNT clusters when the sample has 0.8$\%wt$, so it can be affirmed that this sample is above the percolation threshold. Accordingly, it can be estimated that the qualitative results presented in Figure \ref{fig7} allows the percolation threshold to be estimated between 0.2 $\%wt$ and 0.5 $\%wt$ for this type of composite as was reported by \cite{Souri2017, Garcia-Macias2017, Hoseini2017}. 
+
+None of the Figures \ref{fig7}b or \ref{fig7}c exhibited isolated clusters which are signs of issues caused by agglomeration associated with a poor CNT dispersion within the cementitious matrix. Hence, it can be affirmed that the CNTs dispersion inside the samples with 0.5 $\%wt$ and 0.8 $\%wt$ is homogeneous. 
+
+Finally, the images shown in Figure \ref{fig7} allow to propose two hypotheses:
+
+\begin{itemize}
+    
+
+\item  There is a uniform distribution of CNTs within the cementitious matrix, at least for samples with 0.5  and 0.8$\%wt$, validating the proportions of the constituents selected to make the CNT/CMC material and, in general, the methodology used to disperse the CNTs within the CMC.
+\item 	The higher the CNT fraction, the greater the number of clusters which are close to each other, and, therefore, greater the number of CNTs in contact, which entails a greater electrical conductivity.
+
+\end{itemize}
+
+
+
+\subsection{Electrical behavior of the nanocomposite.}
+
+The Ohmic behavior of the material was studied by following the proposed methodology for the acquisition of I-V curves described in the previous section and schematized in Figure \ref{fig3}a. From Figure \ref{fig8}a to Figure \ref{fig8}c, it is shown the amperometric response (I-V curves) of the CNT/CMC when an electrical potential is applied. These figures shown a linear relationship between voltage and current, therefore, it is concluded that the CNT/CMC material having 0.2 , 0.5 and 0.8 $\%wt$, exhibit an electrical behavior equivalent to an ideal resistor, that is, an Ohmic behavior.
+
+From this result, it was determined that any technique or methodology for characterizing the electrical resistance that assumed the material behavior as an Ohmic material can be implemented. The electrical resistance reported in Table 1 was estimated using Ohm's law. The results for the I-V curves are presented in Figure \ref{fig8}.
+
+\begin{figure}[h!]
+  \caption{\csentence{Curves I-V using DC for samples with a) 0.2 $\%wt$ of CNTs, b) 0.5 $\%wt$ and c) 0.8 $\%wt$.}
+      }
+      \label{fig8}
+      \end{figure}
+  
+
+An approximate measure of the electrical resistance of each specimen obtained using  I-V curves and Ohm's law is presented in Table \ref{tab1}, Nevertheless, the electric resistance measurements of the samples with 0.2  and 0.5 $\%wt$ of CNT present a high standard deviation, which implies low reliability, concluding that it is necessary to implement measurement methods of the electrical resistance with higher accuracy. Also, it can be seen a change up to four orders of magnitude in the value of electrical resistance when the fraction of CNTs increases from 0.2  to 0.8 $\%wt$, exposing that the percolation threshold is between 0.2 and 0.8 $\%wt$, result also reported by \cite{Garcia-Macias2017}.
+
+\begin{table*}[ht]
+\caption{Electrical resistance values and their corresponding standard deviations obtained from the I-V curves characterization.}
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{CNTs ($\% wt$)} & \textbf{Average Electrical Resistance ($\Omega$)} & \textbf{Standard deviation ($\Omega$)}\\
+\hline
+0.2 & 5335505.50 & 250871.25\\
+\hline
+0.5 & 88245.70 & 3813.08\\
+\hline
+0.8 & 693.32 & 14.99\\
+\hline 
+
+\end{tabular}
+\label{tab1}
+\end{table*}
+
+
+The results showed in Figure \ref{fig9} were obtained following the experimental setup reported in the experimental procedure (Figures \ref{fig3}b and \ref{fig3}c). An analysis is presented regarding the relevance of methodologies based on the use of DC and BDC sources against the decrease in error and increase the accuracy in the electrical resistance characterization of the samples.
+
+\begin{figure}[h!]
+  \caption{\csentence{Figure 9. Comparison using direct current and BDC for samples of a) 0.2 $\%wt$ of CNTs, b) 0.5 $\%wt$ and c) 0.8 $\%wt$.}
+      }
+      \label{fig9}
+      \end{figure}
+
+
+Looking at Figures \ref{fig9}a and \ref{fig9}b, it can be seen that the electric polarization  appears when measurements are made using DC methods. For samples with 0.2 $\%wt$ electrical polarization does not tend to stabilize; by contrast, the electrical resistance increases with time, this behavior is also reported in \cite{Garcia-Macias2017a, Downey2017}. Likewise, samples with 0.5 $\%wt$ also exhibit electrical polarization, however, it tends to stabilize after 40 seconds have elapsed. In contrast, samples with high content of CNTs, as 0.8 $\%wt$, do not show electrical polarization.
+
+It is known that the electrical behavior of the CNT/CMC material is determined by two fundamental factors: first, the electrical conductivity phenomenon within the material which it is mainly dominated by electronic conduction, and secondly, the capacitance formed between the CNTs and the cementitious matrix. The electronic conduction is dominated by two mechanisms: electronic hopping when the material is below the percolation threshold, and by contact between carbon nanotubes when it is above the percolation threshold \cite{Garcia-Macias2017a, Downey2017}. 
+
+In turn, the capacitive phenomena in the CNT/CMC material is due to the dielectric nature of the matrix, since by occupying spaces among conductive clusters of CNTs, capacitor-type arrangements are created within the material. As a result, the charge of the “capacitors”, formed between the CNT clusters and the cementitious matrix, causes the electrical polarization phenomena that it is reflected in a constant growth in electrical resistance over time \cite{Dong2016}.
+
+Based on the previous idea, the electric polarization effects in the samples with 0.2 $\%wt$ and 0.5 $\%wt$ (Figure \ref{fig9}a and \ref{fig9}b) are due to the low CNT concentration within the CMC material (Figures \ref{fig7}a and \ref{fig7}b), as consequence, a greater separation between CNTs is generated and such space is occupied by concrete.  
+
+Similarly, capacitive behavior will be generated between conductive elements as CNTs \cite{Garcia-Macias2017a, Downey2017, Dong2016, Balberg1984}. So, the CNT concentration must be raised in order to reduce the polarization effect and thus be able to obtain electrical resistance measurements using DC methods. In fact, in samples with 0.8 $\%wt$ (Figure \ref{fig9}c) the stabilization time of the electrical resistance is very short and there is no electric polarization effect.
+
+As was describe in experimental procedure, BDC methodology was performed in order to avoid the samples polarization phenomena. When analyzing the electrical resistance behavior of the CNT/CMC material characterized by BDC, it is observed that the samples with 0.5 $\%wt$ (Figure \ref{fig9}b) and 0.8 $\%wt$ (Figure \ref{fig9}c) do not exhibit electrical polarization phenomena. In other words, their electrical resistance is invariant throughout time, validating In this way, the methodology  to avoid the polarization proposed by  \cite{Downey2017a, DAlessandro2017}.
+
+Another aspect that is worth analyzing in regard the results presented in Figures \ref{fig9}a, \ref{fig9}b and \ref{fig9}c is the magnitude of the electrical resistance. For the measurements obtained with DC it is greater than the measurements obtained with BDC. This is because of the effect that the electrodes have on the electrical resistance of the material, when it is measured with DC. By contrast, when measurements are made with BDC, and the I-V curve method is used, the contribution to the electrical resistance owing to the electrodes is negligible, as was reported by  \cite{Konsta-Gdoutos2014}.
+
+For samples with 0.2$\%wt$, the characterization was not carried out using methodologies based on BDC, due to the low electrical conductivity. When trying to measure the voltage $V_INT$, the characteristic noise signal of the oscilloscope was greater than the magnitude of the voltage, hence, there was no reliability in the measurement. 
+
+\subsection{Evaluation of the piezoresistive behavior.}
+
+In this subsection, the relationship between strain and the change in the electrical resistance of the CNT/CMC material when the samples are subjected to a compressing test is established . DC based methodology related in experimental procedure section  was selected for characterize the material piezoresistive behavior because the BDC equipment require to measure the composite electrical resistance is a scarce resource, and most are custom-made, resulting an instrumentation price increase and also making industrial scaling difficult.
+
+Piezoresistive characterization was only performed on samples which did not exhibit an electrical polarization effect, since it is impractical to wait until the stabilization time of electrical resistance in samples that exhibited electrical polarization, when SHM application are procurated. In this regard, only characterization of the piezoresistive behavior for the sample with 0.8 $\%wt$ was performed.
+
+The experimental results for the sample with 0.8 $\%wt$ are shown in Figure \ref{fig10}. In this figure, the material piezoresistive response is repeatable and reversible. It is also remarkable a proportional behavior between the electrical resistance and the compression-induced strain. Besides, the electric response of the material when it is subjected to compressive loads, consist of a negative change in the electrical resistance, which is caused by the reduction of the distance among the CNTs \cite{DAlessandro2017}.
+
+For multifunctional materials that function as sensors, it is convenient a reversible and repeatable response. In this way, phenomena such as hysteresis or variation of the electrical response will not appear due repeated load application unless a damage occurs.  Therefore, it can be seen that at all times, the response of the piezoresistive material clearly depends on the instantaneous load that is being applied to it (i.e. it is not a complex response against coupling of several phenomena). In this way, the interpretation of data obtained from piezoresistive material will be simpler [49].
+
+\begin{figure}[h!]
+  \caption{\csentence{ Characterization with 0.8piezoresistance phenomenon in the sample with 0.8 $\%wt$ of CNTs.}
+      }
+      \label{fig10}
+      \end{figure}
+
+
+Applying Equation 1 to all the points in Figure 10, it is possible to obtain the gauge factor for the 8 experiments. The obtained value was $972.87\epsilon^{-1}$ and its standard deviation was $17.47 \epsilon^{-1}$. With this result, the sensitive capability of the CNT/CMC with 0.8 $\%wt$ CNTs is demonstrated. Besides, it is observed that the CNT/CMC electric resistance starts to vary from the moment when load is applied, allowing to measure small strains magnitudes.
+Another result of the analysis of Figure 10 is the ability of the CNT/CMC material to withstand strains up to -100 µε and return to the initial state (electrical resistance magnitude). This can be explained since the compressive strength of the CNT/CMC samples exceed 30 MPa and its Young modulus were around 20 GPa when these were characterized according to ASTM C109/C109M-16a and ACI 318-14 standards. Therefore, at -100 µε, the compressive strength of the concrete has not been exceeded, knowing that the maximum stress experienced by the material at -100 µε according to the Hooke’s law, it approximately 2 MPa (assuming a linear elastic behavior just as an indicative reference), that is, around 10 $\%$ of the CNT/CMC compressive strength. 
+With above in mind, embedding the CNT/CMC within the RC beam causes a slight positive stress concentrator since it is rigidity is greater than the common concrete. However, it does not represent a threat to the component operability.
+
+\subsection{ Full-scale beam tests.}
+
+After aging 28 days, the piezoresistive behavior of the CNT/CMC parallelepiped embedded into the RC beam was evaluated. The electrical and mechanical characterization were performed through a three-point bending test, for both a pristine and a damaged condition (with and without artificially induced positive damage), whereas strain and electrical resistance data were acquired. Figure 11 shows the change in the electrical resistance measured in the CNT/CMC material, when a load from 0 to 15 kN is applied at a constant displacement speed of 0.5 mm/min.
+The behavior of the electrical resistance vs. strain for the pristine and damaged conditions is shown in Figure 11. As can be seen, such behavior is nonlinear in the range from 0 to -10 µε. This can be associated to the complex phenomena of load transfer through the different interfaces between the RC beam elements: 1. corrugated steel reinforcement of the RC beam and the concrete of the RC beam, 2. concrete of the RC beam and corrugated steel rods embedded within the parallelepiped (dowels), 3. corrugated steel rods embedded within the parallelepiped (dowels)  and CNT/CMC material of the parallelepiped, and finally, 4. steel plate used as positive damage and concrete of the RC beam. In particular, the interface between the steel plate and the concrete was constituted by an epoxy adhesive layer, that could contribute greatly to the appearance of the non-linear phenomena.
+
+Figure 11. Behavior of the piezoresistive response of the CNT/CMC against the state of damage and no damage for the RC beam. Dynamic load from 0 to 15 kN.
+From figure 11 it is possible to observe a change in the slope for damaged state vs. pristine state. Such change can be interpreted as a variation in the global beam stiffness, which is produced by the damage occurrence. This result demonstrates the capability to detect global changes in the stiffness of a simple structure such as a beam, by means of strain measurements obtained from a piezoresistive material.
+To validate the strains obtained through the CNT/CMC material embedded into the RC beam, a FBG sensor was bonded to one of the beam sides, by doing so it was opposite of the CNT/CMC parallelepiped, and both measured compressive strains. Strains measurements were gathered during all experiments using the FBG and, at the same time, electrical resistance was measured by using a DC tester. This procedure was repeated 10 times using the experimental setup described in section 2.5. The results obtained are presented in Figure 12.
+From Figure 12, is is possible to observe the repeatability of the results obtained for the CNT/CMC material and the FBG strain sensor. On the basis of the foregoing, the CNT/CMC just like the FBG provide a dynamic response to the load application, wherewith a strain is induced. However, it is observed that there are differences in the magnitude of the strain as the magnitude of the applied load increases. These differences are mainly due to three factors: 
+
+1. The two sensors are not located in the same place (see numbers 4 and 6 in Figure 6), whereof the strain measurements obtained by both sensors give an account of the beam behavior at two different points,
+
+2. The nonlinear load transfer phenomena as explained before, 
+
+3. The fact that, when measuring the strain with the CNT/CMC material, which is embedded within the RC beam, its response is proportional to the volumetric deformation. The FBG sensor, on the other hand, measures uniaxial strain in the direction on which it is installed on the beam’s surface.
+
+Figure 12. Behavior of the CNT/CMC and the FBG sensor as function of time. Dynamic load from 0 to 15 kN.
+
+Figure 13 shows the results of the strain measured by the FBG for a dynamic load from 0 to 15 kN applied to the RC beam at a constant displacement speed of 5 mm/min for the damage and undamaged states. Here, two phenomena can be observed: the first one is change in the slope at low load magnitudes (loads less than 8kN), whereby it matches with the previously described nonlinear behavior for the loads transfer on the RC beam. The second phenomenon is the global change in slope observed when the structure is damaged, compared to the pristine structure. This indicate the ability to infer changes in the global stiffness promoted by damage occurrence from FBGs strain measurements.
+
+Figure 13. Behavior of the FBG vs Load for undamaged and damaged conditions.
+Figure 14 shows the strain vs. load for damaged and undamaged states by using the CNT/CMC material. This result entails that the CNT/CMC material has the ability to sense small strain magnitudes and from such strain measures it is possible to infer changes in the global stiffness promoted by damage occurrence.
+In contrast to Figure 13, it is observed that the curves shown in Figure 14 do not show a significant slope when the applied load is less than 8kN; this is precisely due to the fact that the sensor is embedded within the structure, measuring the strain through a change in its volume, then, it is expected that the behavior of the acquired data is mostly linear against the applied load.
+
+Figure 14. Behavior of the piezoresistive response of the CNT/CMC against the state of damage and no damage to the RC beam.
+
+\section*{Conclusions}
+
+From the results presented in advance, from their analysis and discussion, the following conclusions about the performance of the CNT/CMC material can be derived:
+The dispersion of CNTs within the cementitious matrix can be considered as homogeneous for made specimens with concentrations of 0.2 $\%wt$, 0.5 $\%wt$ and 0.8 $\%wt$, using the manufacturing technique presented in this work.
+The electrical behavior of the CNT/CMC material developed can be described as an ideal resistor, consequently any method of electrical characterization based on Ohm's law can be used to characterize the electrical resistance. In this way, it is concluded that the most suitable characterization method for electrical resistance is the one that uses a DC source, since as demonstrated in the results, with this method it is possible to obtain dynamic measurements, the standard deviation is smaller and experimental setups are simpler and cheaper compared to methods that use a DC-biphasic type power supply.
+Electrical polarization phenomenon occurs only when there are low fractions of CNTs and when characterization techniques of the electrical resistance based on the use of a DC source are used, thus it is concluded that in order to obtain measurements without electrical polarization, it is necessary to make samples with concentrations of 0.8 $\%wt$ or higher.
+The developed CNT/CMC material shows a dynamic piezoresistive response, linear and repeatable against the loads application that induce strains to its volume, which makes it attractive for applications in structural health monitoring.
+The piezoresistive response of the CNT/CMC parallelepiped when it is embedded within a civil structure component such as a beam, is similar to response exhibited by the cubic samples used for characterizing the piezoresistive effect.  In both of them, the behavior is linear and repeatable, that is why the operation of the CNT/CMC material is validated as a strain sensor.
+It was evidenced that the way in the CNT/CMC material measures the strain is a volumetric way. That is, the change in the electrical resistance is proportional to the volumetric strain.
+It was found that by using the CNT/CMC material as a strain sensor, it is possible to infer the damage occurrence in a civil structural component (RC beam) though studying the change of slope in a load vs. strain curve which can be associated to a global stiffness change promoted by damage. This probes the concept of the first SHM stage (damage detection).
+
+
+%\nocite{oreg,schn,pond,smith,marg,hunn,advi,koha,mouse}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%% Backmatter begins here                   %%
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{backmatter}
+
+\section*{Competing interests}
+  The authors declare that they have no competing interests.
+
+\section*{Author's contributions}
+    Text for this section \ldots
+
+\section*{Acknowledgements}
+  Text for this section \ldots
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                  The Bibliography                       %%
+%%                                                         %%
+%%  Bmc_mathpys.bst  will be used to                       %%
+%%  create a .BBL file for submission.                     %%
+%%  After submission of the .TEX file,                     %%
+%%  you will be prompted to submit your .BBL file.         %%
+%%                                                         %%
+%%                                                         %%
+%%  Note that the displayed Bibliography will not          %%
+%%  necessarily be rendered by Latex exactly as specified  %%
+%%  in the online Instructions for Authors.                %%
+%%                                                         %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% if your bibliography is in bibtex format, use those commands:
+\bibliographystyle{bmc-mathphys} % Style BST file (bmc-mathphys, vancouver, spbasic).
+\bibliography{Art_REF}      % Bibliography file (usually '*.bib' )
+% for author-year bibliography (bmc-mathphys or spbasic)
+% a) write to bib file (bmc-mathphys only)
+% @settings{label, options="nameyear"}
+% b) uncomment next line
+%\nocite{label}
+
+% or include bibliography directly:
+% \begin{thebibliography}
+% \bibitem{b1}
+% \end{thebibliography}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                               %%
+%% Figures                       %%
+%%                               %%
+%% NB: this is for captions and  %%
+%% Titles. All graphics must be  %%
+%% submitted separately and NOT  %%
+%% included in the Tex document  %%
+%%                               %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%
+%% Do not use \listoffigures as most will included as separate files
+
+\section*{Figures}
+  \begin{figure}[h!]
+  \caption{\csentence{Sample figure title.}
+      A short description of the figure content
+      should go here.}
+      \end{figure}
+
+\begin{figure}[h!]
+  \caption{\csentence{Sample figure title.}
+      Figure legend text.}
+      \end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                               %%
+%% Tables                        %%
+%%                               %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Use of \listoftables is discouraged.
+%%
+\section*{Tables}
+\begin{table}[h!]
+\caption{Sample table title. This is where the description of the table should go.}
+      \begin{tabular}{cccc}
+        \hline
+           & B1  &B2   & B3\\ \hline
+        A1 & 0.1 & 0.2 & 0.3\\
+        A2 & ... & ..  & .\\
+        A3 & ..  & .   & .\\ \hline
+      \end{tabular}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                               %%
+%% Additional Files              %%
+%%                               %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Additional Files}
+  \subsection*{Additional file 1 --- Sample additional file title}
+    Additional file descriptions text (including details of how to
+    view the file, if it is in a non-standard format or the file extension).  This might
+    refer to a multi-page table or a figure.
+
+  \subsection*{Additional file 2 --- Sample additional file title}
+    Additional file descriptions text.
+
+
+\end{backmatter}
+\end{document}
